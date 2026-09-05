@@ -1,0 +1,256 @@
+[
+  {
+    "customer_id": "C001",
+    "name": "Aditya Thomas",
+    "loyalty_tier": "Gold",
+    "visit_frequency": "biweekly",
+    "last_visit_date": "2026-08-27",
+    "avg_spend": 1900,
+    "tags": [
+      "large_group_regular",
+      "vegetarian"
+    ],
+    "discount_fatigue_flag": true,
+    "offers_received_this_month": 2
+  },
+  {
+    "customer_id": "C002",
+    "name": "Rohan Rao",
+    "loyalty_tier": "Gold",
+    "visit_frequency": "weekly",
+    "last_visit_date": "2026-09-01",
+    "avg_spend": 1520,
+    "tags": [
+      "vegetarian",
+      "large_group_regular"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 1
+  },
+  {
+    "customer_id": "C003",
+    "name": "Karthik Bhat",
+    "loyalty_tier": "Bronze",
+    "visit_frequency": "monthly",
+    "last_visit_date": "2026-07-19",
+    "avg_spend": 540,
+    "tags": [
+      "celebrates_birthday_this_month"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 1
+  },
+  {
+    "customer_id": "C004",
+    "name": "Aditya Iyer",
+    "loyalty_tier": "Gold",
+    "visit_frequency": "weekly",
+    "last_visit_date": "2026-09-02",
+    "avg_spend": 1860,
+    "tags": [
+      "large_group_regular",
+      "celebrates_birthday_this_month"
+    ],
+    "discount_fatigue_flag": true,
+    "offers_received_this_month": 3
+  },
+  {
+    "customer_id": "C005",
+    "name": "Divya Pillai",
+    "loyalty_tier": "Bronze",
+    "visit_frequency": "rare",
+    "last_visit_date": "2026-07-15",
+    "avg_spend": 520,
+    "tags": [
+      "vegetarian",
+      "non_vegetarian"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 0
+  },
+  {
+    "customer_id": "C006",
+    "name": "Anjali Gupta",
+    "loyalty_tier": "Gold",
+    "visit_frequency": "weekly",
+    "last_visit_date": "2026-08-24",
+    "avg_spend": 2150,
+    "tags": [
+      "non_vegetarian",
+      "vegan"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 1
+  },
+  {
+    "customer_id": "C007",
+    "name": "Divya Gupta",
+    "loyalty_tier": "Platinum",
+    "visit_frequency": "weekly",
+    "last_visit_date": "2026-08-31",
+    "avg_spend": 3300,
+    "tags": [
+      "prefers_quiet_area"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 2
+  },
+  {
+    "customer_id": "C008",
+    "name": "Manoj Krishnan",
+    "loyalty_tier": "Silver",
+    "visit_frequency": "biweekly",
+    "last_visit_date": "2026-08-19",
+    "avg_spend": 1080,
+    "tags": [
+      "celebrates_birthday_this_month",
+      "prefers_quiet_area",
+      "non_vegetarian"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 2
+  },
+  {
+    "customer_id": "C009",
+    "name": "Meera Nair",
+    "loyalty_tier": "Bronze",
+    "visit_frequency": "rare",
+    "last_visit_date": "2026-08-24",
+    "avg_spend": 810,
+    "tags": [
+      "prefers_window_seat",
+      "vegan"
+    ],
+    "discount_fatigue_flag": true,
+    "offers_received_this_month": 2
+  },
+  {
+    "customer_id": "C010",
+    "name": "Divya Rao",
+    "loyalty_tier": "Bronze",
+    "visit_frequency": "rare",
+    "last_visit_date": "2026-07-16",
+    "avg_spend": 660,
+    "tags": [
+      "celebrates_birthday_this_month",
+      "prefers_window_seat"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 0
+  },
+  {
+    "customer_id": "C011",
+    "name": "Lakshmi Reddy",
+    "loyalty_tier": "Silver",
+    "visit_frequency": "monthly",
+    "last_visit_date": "2026-08-08",
+    "avg_spend": 1370,
+    "tags": [
+      "vegan",
+      "celebrates_birthday_this_month",
+      "prefers_quiet_area"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 1
+  },
+  {
+    "customer_id": "C012",
+    "name": "Anjali Bhat",
+    "loyalty_tier": "Bronze",
+    "visit_frequency": "rare",
+    "last_visit_date": "2026-08-18",
+    "avg_spend": 660,
+    "tags": [
+      "vegetarian",
+      "large_group_regular"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 0
+  },
+  {
+    "customer_id": "C013",
+    "name": "Sneha Krishnan",
+    "loyalty_tier": "Silver",
+    "visit_frequency": "biweekly",
+    "last_visit_date": "2026-08-12",
+    "avg_spend": 860,
+    "tags": [
+      "prefers_window_seat",
+      "prefers_quiet_area"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 1
+  },
+  {
+    "customer_id": "C014",
+    "name": "Pooja Gupta",
+    "loyalty_tier": "Silver",
+    "visit_frequency": "monthly",
+    "last_visit_date": "2026-08-10",
+    "avg_spend": 920,
+    "tags": [
+      "prefers_quiet_area",
+      "vegan",
+      "celebrates_birthday_this_month"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 0
+  },
+  {
+    "customer_id": "C015",
+    "name": "Vivek Thomas",
+    "loyalty_tier": "Silver",
+    "visit_frequency": "monthly",
+    "last_visit_date": "2026-08-17",
+    "avg_spend": 800,
+    "tags": [
+      "celebrates_birthday_this_month",
+      "vegan",
+      "prefers_quiet_area"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 0
+  },
+  {
+    "customer_id": "C016",
+    "name": "Pooja Iyer",
+    "loyalty_tier": "Bronze",
+    "visit_frequency": "monthly",
+    "last_visit_date": "2026-07-17",
+    "avg_spend": 660,
+    "tags": [
+      "non_vegetarian",
+      "large_group_regular",
+      "vegan"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 0
+  },
+  {
+    "customer_id": "C017",
+    "name": "Aditya Kurup",
+    "loyalty_tier": "Bronze",
+    "visit_frequency": "rare",
+    "last_visit_date": "2026-07-19",
+    "avg_spend": 560,
+    "tags": [
+      "vegetarian",
+      "large_group_regular"
+    ],
+    "discount_fatigue_flag": false,
+    "offers_received_this_month": 1
+  },
+  {
+    "customer_id": "C018",
+    "name": "Vivek Sharma",
+    "loyalty_tier": "Silver",
+    "visit_frequency": "monthly",
+    "last_visit_date": "2026-08-24",
+    "avg_spend": 1380,
+    "tags": [
+      "vegetarian"
+    ],
+    "discount_fatigue_flag": true,
+    "offers_received_this_month": 3
+  }
+]

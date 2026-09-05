@@ -1,0 +1,202 @@
+[
+  {
+    "reservation_id": "R101",
+    "customer_id": "C003",
+    "table_id": "T11",
+    "time_slot": "2026-09-05T21:15:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R102",
+    "customer_id": "C008",
+    "table_id": "T01",
+    "time_slot": "2026-09-05T12:00:00",
+    "status": "cancelled",
+    "cancelled_at": "2026-09-05T14:00:00"
+  },
+  {
+    "reservation_id": "R103",
+    "customer_id": "C003",
+    "table_id": "T17",
+    "time_slot": "2026-09-05T19:45:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R104",
+    "customer_id": "C007",
+    "table_id": "T18",
+    "time_slot": "2026-09-05T20:15:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R105",
+    "customer_id": "C016",
+    "table_id": "T14",
+    "time_slot": "2026-09-05T20:30:00",
+    "status": "cancelled",
+    "cancelled_at": "2026-09-05T13:00:00"
+  },
+  {
+    "reservation_id": "R106",
+    "customer_id": "C014",
+    "table_id": "T15",
+    "time_slot": "2026-09-07T12:00:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R107",
+    "customer_id": "C002",
+    "table_id": "T13",
+    "time_slot": "2026-09-07T19:00:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R108",
+    "customer_id": "C008",
+    "table_id": "T07",
+    "time_slot": "2026-09-05T21:45:00",
+    "status": "completed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R109",
+    "customer_id": "C005",
+    "table_id": "T14",
+    "time_slot": "2026-09-05T19:45:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R110",
+    "customer_id": "C008",
+    "table_id": "T03",
+    "time_slot": "2026-09-06T21:00:00",
+    "status": "cancelled",
+    "cancelled_at": "2026-09-05T15:25:00"
+  },
+  {
+    "reservation_id": "R111",
+    "customer_id": "C018",
+    "table_id": "T01",
+    "time_slot": "2026-09-05T13:15:00",
+    "status": "completed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R112",
+    "customer_id": "C014",
+    "table_id": "T16",
+    "time_slot": "2026-09-06T13:45:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R113",
+    "customer_id": "C002",
+    "table_id": "T06",
+    "time_slot": "2026-09-06T12:45:00",
+    "status": "completed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R114",
+    "customer_id": "C009",
+    "table_id": "T15",
+    "time_slot": "2026-09-05T20:45:00",
+    "status": "completed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R115",
+    "customer_id": "C005",
+    "table_id": "T07",
+    "time_slot": "2026-09-05T13:00:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R116",
+    "customer_id": "C018",
+    "table_id": "T02",
+    "time_slot": "2026-09-07T19:00:00",
+    "status": "completed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R117",
+    "customer_id": "C002",
+    "table_id": "T19",
+    "time_slot": "2026-09-06T21:15:00",
+    "status": "completed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R118",
+    "customer_id": "C002",
+    "table_id": "T17",
+    "time_slot": "2026-09-05T13:00:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R119",
+    "customer_id": "C003",
+    "table_id": "T08",
+    "time_slot": "2026-09-06T12:15:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R120",
+    "customer_id": "C002",
+    "table_id": "T20",
+    "time_slot": "2026-09-05T19:15:00",
+    "status": "cancelled",
+    "cancelled_at": "2026-09-05T14:00:00"
+  },
+  {
+    "reservation_id": "R121",
+    "customer_id": "C008",
+    "table_id": "T09",
+    "time_slot": "2026-09-06T13:30:00",
+    "status": "completed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R122",
+    "customer_id": "C015",
+    "table_id": "T11",
+    "time_slot": "2026-09-05T12:00:00",
+    "status": "cancelled",
+    "cancelled_at": "2026-09-05T15:05:00"
+  },
+  {
+    "reservation_id": "R123",
+    "customer_id": "C017",
+    "table_id": "T09",
+    "time_slot": "2026-09-05T19:00:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R124",
+    "customer_id": "C008",
+    "table_id": "T12",
+    "time_slot": "2026-09-05T13:45:00",
+    "status": "completed",
+    "cancelled_at": null
+  },
+  {
+    "reservation_id": "R125",
+    "customer_id": "C018",
+    "table_id": "T10",
+    "time_slot": "2026-09-06T21:00:00",
+    "status": "confirmed",
+    "cancelled_at": null
+  }
+]

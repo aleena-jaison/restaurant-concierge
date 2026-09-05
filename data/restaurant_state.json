@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-09-05T15:30:00",
+  "total_tables": 20,
+  "occupied_tables": 6,
+  "occupancy_pct": 30,
+  "is_peak_hour": false,
+  "cancellations_last_30min": 2,
+  "cancellations_today": 5
+}
