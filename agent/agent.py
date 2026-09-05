@@ -57,10 +57,8 @@ def _call_llm(prompt: str) -> str:
         try:
             from google import genai  # type: ignore
             client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-            response = client.models.generate_content(
-                model='gemini-3.6-flash',
-                contents=prompt,
-            )
+            chat = client.chats.create(model='gemini-3.6-flash')
+            response = chat.send_message(prompt)
             return response.text
         except ImportError:
             raise ImportError("google-genai package is required. Install it using 'pip install google-genai'")
