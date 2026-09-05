@@ -136,41 +136,14 @@ def decide(context: dict) -> dict:
 
 def log_decision(decision: dict, context: dict) -> None:
     """
-    Appends the decision plus a timestamp and the occupancy snapshot to decisions_log.json.
+    Logs the decision to the SQLite database.
     """
-    # Use absolute path resolving relative to this file to find data/decisions_log.json
-    log_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'decisions_log.json')
+    import sys
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from data_layer.db import log_decision as db_log_decision
     
     state = context.get("restaurant_state", {})
-    occupancy_pct = state.get("occupancy_pct", 0)
-    
-    entry = {
-        "decision_id": f"D{uuid.uuid4().hex[:4].upper()}",
-        "timestamp": datetime.now().isoformat(),
-        "occupancy_snapshot": occupancy_pct,
-        "decision_type": decision.get("decision"),
-        "target_customer_id": decision.get("target_customer_id"),
-        "offer": decision.get("offer"),
-        "reasoning": decision.get("reasoning"),
-        "rendered_payload": "..."
-    }
-    
-    logs = []
-    if os.path.exists(log_file):
-        try:
-            with open(log_file, 'r') as f:
-                content = f.read().strip()
-                if content:
-                    logs = json.loads(content)
-        except json.JSONDecodeError:
-            pass
-            
-    logs.append(entry)
-    
-    os.makedirs(os.path.dirname(log_file), exist_ok=True)
-    
-    with open(log_file, 'w') as f:
-        json.dump(logs, f, indent=2)
+    db_log_decision(decision, state)
 
 if __name__ == "__main__":
     # Test execution

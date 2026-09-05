@@ -1,0 +1,82 @@
+[
+  {
+    "decision_id": "D1331",
+    "timestamp": "2026-09-05T14:21:06.429416",
+    "occupancy_snapshot": 25,
+    "decision_type": "high_incentive",
+    "target_customer_id": "C001",
+    "offer": "Fallback generated offer for high_incentive",
+    "reasoning": "Generated via fallback rule engine. Score was 102.5.",
+    "rendered_payload": "..."
+  },
+  {
+    "decision_id": "D257D",
+    "timestamp": "2026-09-05T14:27:34.612398",
+    "occupancy_snapshot": 25,
+    "decision_type": "high_incentive",
+    "target_customer_id": "C001",
+    "offer": "Fallback generated offer for high_incentive",
+    "reasoning": "Generated via fallback rule engine. Score was 102.5.",
+    "rendered_payload": "..."
+  },
+  {
+    "decision_id": "D64DB",
+    "timestamp": "2026-09-05T14:27:38.587311",
+    "occupancy_snapshot": 20,
+    "decision_type": "high_incentive",
+    "target_customer_id": "C001",
+    "offer": "Fallback generated offer for high_incentive",
+    "reasoning": "Generated via fallback rule engine. Score was 120.0.",
+    "rendered_payload": "..."
+  },
+  {
+    "decision_id": "D2CE9",
+    "timestamp": "2026-09-05T14:27:40.997905",
+    "occupancy_snapshot": 15,
+    "decision_type": "high_incentive",
+    "target_customer_id": "C001",
+    "offer": "Fallback generated offer for high_incentive",
+    "reasoning": "Generated via fallback rule engine. Score was 137.5.",
+    "rendered_payload": "..."
+  },
+  {
+    "decision_id": "D3CCB",
+    "timestamp": "2026-09-05T14:27:42.121317",
+    "occupancy_snapshot": 10,
+    "decision_type": "high_incentive",
+    "target_customer_id": "C001",
+    "offer": "Fallback generated offer for high_incentive",
+    "reasoning": "Generated via fallback rule engine. Score was 155.0.",
+    "rendered_payload": "..."
+  },
+  {
+    "decision_id": "D5C00",
+    "timestamp": "2026-09-05T14:35:12.728741",
+    "occupancy_snapshot": 25,
+    "decision_type": "high_incentive",
+    "target_customer_id": "C001",
+    "offer": "Fallback generated offer for high_incentive",
+    "reasoning": "Generated via fallback rule engine. Score was 102.5.",
+    "rendered_payload": "..."
+  },
+  {
+    "decision_id": "D62EE",
+    "timestamp": "2026-09-05T14:35:30.793605",
+    "occupancy_snapshot": 25,
+    "decision_type": "high_incentive",
+    "target_customer_id": "C001",
+    "offer": "Fallback generated offer for high_incentive",
+    "reasoning": "Generated via fallback rule engine. Score was 102.5.",
+    "rendered_payload": "..."
+  },
+  {
+    "decision_id": "D0C70",
+    "timestamp": "2026-09-05T14:39:03.398545",
+    "occupancy_snapshot": 25,
+    "decision_type": "high_incentive",
+    "target_customer_id": "C001",
+    "offer": "Fallback generated offer for high_incentive",
+    "reasoning": "Generated via fallback rule engine. Score was 102.5.",
+    "rendered_payload": "..."
+  }
+]
