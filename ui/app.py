@@ -9,7 +9,7 @@ in this file.
 import random
 from datetime import datetime, timedelta
 
-import streamlit as st
+import streamlit as st  # type: ignore
 from dotenv import load_dotenv
 
 import sys
