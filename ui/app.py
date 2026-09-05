@@ -11,6 +11,12 @@ from datetime import datetime, timedelta
 
 import streamlit as st
 from dotenv import load_dotenv
+
+import sys
+import os
+# Add the project root to sys.path so Streamlit can find our local modules
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import agent
 from integration.scenarios import get_scenario
 
