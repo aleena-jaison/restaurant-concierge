@@ -55,13 +55,15 @@ def _call_llm(prompt: str) -> str:
     """Helper to call LLM, easy to swap providers based on environment variables."""
     if "GEMINI_API_KEY" in os.environ:
         try:
-            import google.generativeai as genai  # type: ignore
-            genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-            model = genai.GenerativeModel('gemini-1.5-flash')
-            response = model.generate_content(prompt)
+            from google import genai  # type: ignore
+            client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+            response = client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=prompt,
+            )
             return response.text
         except ImportError:
-            raise ImportError("google-generativeai package is required. Install it using 'pip install google-generativeai'")
+            raise ImportError("google-genai package is required. Install it using 'pip install google-genai'")
     elif "OPENAI_API_KEY" in os.environ:
         try:
             import openai  # type: ignore
