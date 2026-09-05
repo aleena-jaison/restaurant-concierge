@@ -10,6 +10,10 @@ import random
 from datetime import datetime, timedelta
 
 import streamlit as st
+from dotenv import load_dotenv
+import agent
+
+load_dotenv()
 
 # ----------------------------------------------------------------------------
 # PAGE CONFIG
@@ -266,41 +270,20 @@ def get_decision(state: dict, customers: list) -> dict:
     This placeholder is a weighted stand-in so the UI has something live to
     render before the agent module exists.
     """
-    score = (100 - state["occupancy_pct"]) * 0.5
-    score += state["cancellations_last_30min"] * 15
-    score += 0 if state["is_peak_hour"] else 20
-
-    if score < 30:
-        decision = "no_action"
-    elif score < 55:
-        decision = "notify_only"
-    elif score < 75:
-        decision = "low_incentive"
+    context = agent.build_context(state, customers)
+    decision = agent.decide(context)
+    
+    # The UI needs _target_name to render the stub, so we find it from the dataset
+    target = next((c for c in customers if c["customer_id"] == decision.get("target_customer_id")), None)
+    if target:
+        decision["_target_name"] = target["name"]
     else:
-        decision = "high_incentive"
-
-    candidates = [c for c in customers if not c["discount_fatigue_flag"]] or customers
-    target = random.choice(candidates)
-
-    offers = {
-        "no_action": "No offer — table pace is healthy.",
-        "notify_only": f"A quiet note to {target['name']}: tonight has earlier openings.",
-        "low_incentive": f"Complimentary dessert for {target['name']} on an earlier seating.",
-        "high_incentive": f"20% off + a welcome glass for {target['name']}, tonight only.",
-    }
-    reasoning = {
-        "no_action": "Occupancy and cancellation pace are within normal range; no incentive is warranted.",
-        "notify_only": "Occupancy has softened slightly, but the trend doesn't yet justify a paid incentive.",
-        "low_incentive": "Off-peak softness plus recent cancellations call for a light, low-cost nudge.",
-        "high_incentive": "Low occupancy compounded by a cluster of recent cancellations justifies a stronger pull.",
-    }
-    return {
-        "decision": decision,
-        "target_customer_id": target["customer_id"],
-        "offer": offers[decision],
-        "reasoning": reasoning[decision],
-        "_target_name": target["name"],
-    }
+        decision["_target_name"] = "Guest"
+        
+    # Also log it
+    agent.log_decision(decision, context)
+        
+    return decision
 
 
 def _run_decision():
