@@ -78,13 +78,16 @@ def advance_time_slot():
 
 def log_decision(decision: dict, state: dict):
     with get_connection() as conn:
+        now_str = datetime.now().isoformat()
+        
+        # 1. Log the decision
         conn.execute(
             """INSERT INTO decisions_log 
                (decision_id, timestamp, occupancy_snapshot, decision_type, target_customer_id, offer, reasoning)
                VALUES (?, ?, ?, ?, ?, ?, ?)""",
             (
                 f"D{uuid.uuid4().hex[:4].upper()}",
-                datetime.now().isoformat(),
+                now_str,
                 state.get("occupancy_pct", 0),
                 decision.get("decision"),
                 decision.get("target_customer_id"),
@@ -92,4 +95,37 @@ def log_decision(decision: dict, state: dict):
                 decision.get("reasoning")
             )
         )
+        
+        target_id = decision.get("target_customer_id")
+        decision_type = decision.get("decision")
+        
+        # 2. Execute Strategy & Update Dataset 
+        # (As per Hackathon Guideline: "execute that strategy and update the dataset")
+        if target_id and decision_type != "no_action":
+            # Update customer fatigue stats
+            conn.execute(
+                """UPDATE customers 
+                   SET offers_received_this_month = offers_received_this_month + 1,
+                       discount_fatigue_flag = CASE WHEN offers_received_this_month + 1 >= 3 THEN 1 ELSE 0 END
+                   WHERE customer_id = ?""",
+                (target_id,)
+            )
+            
+            # Simulate the customer accepting the offer and filling the table
+            conn.execute(
+                """INSERT INTO reservations (reservation_id, customer_id, table_id, time_slot, status)
+                   VALUES (?, ?, ?, ?, ?)""",
+                (f"R_NEW_{uuid.uuid4().hex[:4].upper()}", target_id, "T_DYNAMIC", now_str, "confirmed")
+            )
+            
+            # Update the restaurant state to reflect the re-filled table
+            conn.execute(
+                """UPDATE restaurant_state 
+                   SET occupied_tables = MIN(total_tables, occupied_tables + 1)"""
+            )
+            conn.execute(
+                """UPDATE restaurant_state 
+                   SET occupancy_pct = ROUND(100.0 * occupied_tables / total_tables)"""
+            )
+            
         conn.commit()
