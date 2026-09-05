@@ -105,7 +105,7 @@ def decide(context: dict) -> dict:
         '{"decision": "...", "target_customer_id": "...", "offer": "...", "reasoning": "2-3 sentences"}'
     )
     
-    prompt = f"{system_prompt}\n\nContext:\n{json.dumps(context)}"
+    prompt = f"{system_prompt}\n\nContext:\n{json.dumps(context, default=str)}"
     
     try:
         response_text = _call_llm(prompt)
