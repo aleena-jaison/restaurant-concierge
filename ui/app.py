@@ -12,6 +12,7 @@ from datetime import datetime, timedelta
 import streamlit as st
 from dotenv import load_dotenv
 import agent
+from integration.scenarios import get_scenario
 
 load_dotenv()
 
@@ -455,6 +456,28 @@ def render_ledger():
 def main():
     inject_style()
     _seed_state()
+    
+    st.sidebar.title("Demo Controls")
+    scenario_options = {
+        "Custom / Live": 0,
+        "1. Peak & Full": 1,
+        "2. Off-Peak Softness": 2,
+        "3. Discount Fatigue": 3,
+        "4. Borderline": 4
+    }
+    selected_scenario = st.sidebar.radio("Load Scenario Snapshot:", list(scenario_options.keys()))
+    
+    idx = scenario_options[selected_scenario]
+    if idx > 0:
+        if st.sidebar.button(f"Load Scenario {idx}"):
+            state, customers = get_scenario(idx)
+            st.session_state.state = state
+            st.session_state.customers = customers
+            st.session_state.decisions_log = []
+            st.session_state.decision_counter = 0
+            if "latest_decision" in st.session_state:
+                del st.session_state["latest_decision"]
+            st.rerun()
 
     state = get_restaurant_state()
     render_hero(state)
